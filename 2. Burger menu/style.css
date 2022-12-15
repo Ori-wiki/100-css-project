@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #3faf82;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+}
+.menu_active .menu__line_position_top {
+  transition: translate 0.3s, rotate 0.3s 0.3s;
+  translate: 0px 23px;
+  rotate: 45deg;
+}
+.menu_active .menu__line_position_center {
+  transition: scale 0.3s;
+  scale: 0;
+}
+.menu_active .menu__line_position_button {
+  transition: translate 0.3s, rotate 0.3s 0.3s;
+  translate: 0px -23px;
+  rotate: 135deg;
+}
+
+.menu__line {
+  width: 80px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+}
+
+.menu__line_position_top {
+  transition: translate 0.3s 0.3s, rotate 0.3s;
+}
+
+.menu__line_position_center {
+  transition: scale 0.3s 0.3s;
+}
+
+.menu__line_position_bot {
+  transition: translate 0.3s 0.3s, rotate 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */
