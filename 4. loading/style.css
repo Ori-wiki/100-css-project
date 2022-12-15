@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom, #b3ffab, #12fff7);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+.first {
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: first-app 2s cubic-bezier(.21, .98, .6, .99) infinite alternate;
+  animation-fill-mode: both;
+}
+
+.second {
+  position: absolute;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-fill-mode: both;
+  animation: second-app 2s cubic-bezier(.21, .98, .6, .99) infinite alternate;
+}
+
+.third {
+  position: absolute;
+  z-index: 1;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-fill-mode: both;
+  animation: third-app 2s cubic-bezier(.21, .98, .6, .99) infinite alternate;
+}
+
+@keyframes first-app {
+
+  0%,
+  70% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes second-app {
+
+  0%,
+  40% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes third-app {
+
+  0%,
+  10% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

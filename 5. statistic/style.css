@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  background-color: #4a4c61
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 220px;
+	width: 280px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8957af;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+color:#fff;
+  /* flex-wrap: wrap; */
+}
+
+.heaeder__title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 12px 0 0 15px;
+}
+
+.header__date {
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0 0 0 15px;
+}
+
+.header__name {
+  font-weight: 400;
+  font-size: 11px;
+  margin: 14px 15px 0 0;
+  align-self: flex-end;
+}
+
+.header__value {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 15px 0 0;
+}
+
+.parameter {}
+
+.parameter__red {}
+
+.parameter__blue {}
+
+.data {}
+
+.red {}
+
+.points {}
+
+.point-1 {}
+
+.tooltip {}
+
+.point-2 {}
+
+.point-3 {}
+
+.point-4 {}
+
+.point-5 {}
+
+.point-6 {}
+
+.point-7 {}
+
+.blue {}
+
+.days {}
+
+.days__item {}
