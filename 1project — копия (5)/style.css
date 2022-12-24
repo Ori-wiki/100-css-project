@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
+:root {
+  --link-color: #ddb35f;
+  --back-color: #ECEBE8;
+  --base-color: #242424;
+}
+
 .frame {
   position: absolute;
   top: 50%;
@@ -11,7 +17,7 @@
   border-radius: 2px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: rgb(255, 255, 255);
+  background: linear-gradient(81deg, #ddb35f, #7409c7);
   color: #333;
   font-family: 'Open Sans', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,33 +33,92 @@
   display: grid;
   grid-template-areas:
     "profile state"
-    "link state"
+    "link state";
+  background: #fff;
 }
 
 .card__porfile {
   grid-area: profile;
   display: flex;
   flex-direction: column;
+  margin: 38px 0 0 0;
+  align-items: center;
+  color: var(--link-color)
 }
 
 .card__img {
-  
-  width: 100%;
-  height: 100%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0;
+  object-fit: cover;
+  position: relative;
 }
 
-.card__title {}
+.card__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px 0 5px 0;
+}
 
-.card__subtitle {}
+.card__subtitle {
+  margin: 0;
+  font-size: 11px;
+  line-height: 15px;
+}
 
 .card__links {
   grid-area: link;
+  display: flex;
+  flex-direction: column;
 }
 
-.card__link {}
+.card__link {
+  width: 120px;
+  height: 30px;
+  margin: 0 auto 10px auto;
+  background: none;
+  border: 1px solid var(--link-color);
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+  color: var(--link-color);
+}
+
+.card__link:hover {
+  color: #fff;
+  background: var(--link-color)
+}
 
 .card__state {
   grid-area: state;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card__discription {}
+.card__discription {
+  justify-content: center;
+  text-align: center;
+  background: var(--link-color);
+  height: 33%;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  transition: all .2s ease-in-out;
+}
+
+.card__discription:hover {
+  opacity: .7;
+}
+
+.card__discription-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card__discription-text {
+  font-size: 11px;
+}
