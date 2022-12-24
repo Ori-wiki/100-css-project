@@ -43,7 +43,8 @@
   flex-direction: column;
   margin: 38px 0 0 0;
   align-items: center;
-  color: var(--link-color)
+  color: var(--link-color);
+  position: relative;
 }
 
 .card__img {
@@ -52,7 +53,8 @@
   border-radius: 50%;
   margin: 0;
   object-fit: cover;
-  position: relative;
+ 
+  border: 1px solid var(--link-color)
 }
 
 .card__title {
