@@ -99,7 +99,7 @@ $blue-light: #b2daff;
       font-size: 15px;
     }
 
-    .titile__search_inpu {
+    .titile__search_input {
       box-sizing: border-box;
       position: absolute;
       top: 13px;
@@ -251,9 +251,9 @@ $blue-light: #b2daff;
       margin-top: -1px;
     }
 
-    .fa-gear,
-    .fa-user,
-    .fa-bell {
+    .item__gear,
+    .item__user,
+    .item__bell {
       margin-top: 0;
     }
   }
