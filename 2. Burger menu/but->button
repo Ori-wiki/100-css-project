@@ -65,7 +65,7 @@
   transition: scale 0.3s 0.3s;
 }
 
-.menu__line_position_bot {
+.menu__line_position_button {
   transition: translate 0.3s 0.3s, rotate 0.3s;
 }
 
