@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="frame">
-    <div class="container">
-      <div class="header">
-        <div class="menu">
-          <div class="menu__top"></div>
-          <div class="menu__bottom"></div>
-          <div class="circle"></div>
+  <body>
+    <div class="frame">
+      <div class="container">
+        <div class="header">
+          <div class="menu">
+            <div class="menu__top"></div>
+            <div class="menu__bottom"></div>
+            <div class="circle"></div>
+          </div>
+          <span class="title">Notifications</span>
+          <input
+            type="text"
+            class="titile__search_input"
+            placeholder="Search ..."
+          />
+          <div class="item item__search search-icon"></div>
         </div>
-        <span class="title">Notifications</span>
-        <input type="text" class="titile__search_input" placeholder="Search ...">
-        <div class="item item__search search-icon"></div>
+
+        <div class="notifications clearfix">
+          <div class="line"></div>
+          <div class="notification">
+            <div class="circle"></div>
+            <span class="time">9:24 AM</span>
+            <p><b>John Walker</b> posted a photo on your wall.</p>
+          </div>
+          <div class="notification">
+            <div class="circle"></div>
+            <span class="time">8:19 AM</span>
+            <p><b>Alice Parker</b> commented your last post.</p>
+          </div>
+          <div class="notification">
+            <div class="circle"></div>
+            <span class="time">Yesterday</span>
+            <p><b>Luke Wayne</b> added you as friend.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="notifications clearfix">
-        <div class="line"></div>
-        <div class="notification">
-          <div class="circle"></div>
-          <span class="time">9:24 AM</span>
-          <p><b>John Walker</b> posted a photo on your wall.</p>
-        </div>
-        <div class="notification">
-          <div class="circle"></div>
-          <span class="time">8:19 AM</span>
-          <p><b>Alice Parker</b> commented your last post.</p>
-        </div>
-        <div class="notification">
-          <div class="circle"></div>
-          <span class="time">Yesterday</span>
-          <p><b>Luke Wayne</b> added you as friend.</p>
-        </div>
+      <div class="menu__aside">
+        <ul>
+          <li><span class="item item__dashboard"></span>Dashboard</li>
+          <li><span class="item item__user"></span>Profile</li>
+          <li><span class="item item__bell"></span>Notifications</li>
+          <li><span class="item item__comments"></span>Messages</li>
+          <li><span class="item item__gear"></span>Settings</li>
+        </ul>
       </div>
+      s
     </div>
-
-    <div class="menu__aside">
-      <ul>
-        <li><span class="item item__dashboard"></span>Dashboard</li>
-        <li><span class="item item__user"></span>Profile</li>
-        <li><span class="item item__bell"></span>Notifications</li>
-        <li><span class="item item__comments"></span>Messages</li>
-        <li><span class="item item__gear"></span>Settings</li>
-      </ul>
-    </div>
-
-  </div>
-</body>
-
+  </body>
 </html>
