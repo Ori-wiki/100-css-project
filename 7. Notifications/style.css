@@ -7,9 +7,8 @@
   height: 400px;
   margin-top: -200px;
   margin-left: -200px;
-  border-radius: 2px;
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background: #264057;
+  background: #006d4c;
   color: #666666;
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +16,7 @@
   overflow: hidden;
 }
 
-.container {
+.panel {
   position: absolute;
   z-index: 2;
   height: 300px;
@@ -25,20 +24,20 @@
   top: 50px;
   left: 50px;
   background: #fff;
-  border-radius: 3px;
   overflow: hidden;
   box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-in-out;
 }
-.container.show-menu {
+.panel.show-menu {
   transform: translate3d(150px, 0, 0);
 }
-.container .header {
+.panel .header {
   height: 60px;
   width: 100%;
-  background: #5f98cd;
+  background: #00a876;
+  position: relative;
 }
-.container .header .menu {
+.panel .header .menu__icon {
   position: absolute;
   width: 29px;
   height: 15px;
@@ -46,37 +45,36 @@
   left: 20px;
   cursor: pointer;
 }
-.container .header .menu:hover .menu__top,
-.container .header .menu:hover .menu__bottom,
-.container .header .menu:hover .circle {
+.panel .header .menu__icon:hover .dash__top,
+.panel .header .menu__icon:hover .dash__bottom,
+.panel .header .menu__icon:hover .circle {
   background: #fff;
 }
-.container .header .menu .menu__top, .container .header .menu .menu__bottom {
+.panel .header .menu__icon .dash__top, .panel .header .menu__icon .dash__bottom {
   position: absolute;
   width: 20px;
   height: 3px;
   top: 0;
   left: 0;
-  background: #b2daff;
-  border-radius: 3px;
+  background: #5fd4b1;
   transition: all 0.2s ease-in-out;
 }
-.container .header .menu .menu__bottom {
+.panel .header .menu__icon .dash__bottom {
   width: 29px;
   top: auto;
   bottom: 0;
 }
-.container .header .menu .circle {
+.panel .header .menu__icon .circle {
   position: absolute;
   height: 7px;
   width: 7px;
   border-radius: 4px;
   top: -2px;
   right: 0;
-  background: #b2daff;
+  background: #5fd4b1;
   transition: all 0.2s ease-in-out;
 }
-.container .header .title {
+.panel .header .title {
   display: block;
   text-align: center;
   line-height: 60px;
@@ -84,7 +82,7 @@
   font-weight: 600;
   font-size: 15px;
 }
-.container .header .titile__search_input {
+.panel .header .search-input {
   box-sizing: border-box;
   position: absolute;
   top: 13px;
@@ -102,33 +100,51 @@
   opacity: 0;
   pointer-events: none;
 }
-.container .header .titile__search_input:focus {
+.panel .header .search-input:focus {
   outline: none;
 }
-.container .header .titile__search_input.active {
+.panel .header .search-input.active {
   transform: translateX(0);
   opacity: 1;
   pointer-events: all;
 }
-.container .header .search-icon {
+.panel .header .search-icon {
+  cursor: pointer;
   position: absolute;
   z-index: 2;
-  font-size: 21px;
-  color: #b2daff;
+  height: 10px;
+  width: 10px;
+  opacity: 0.5;
   top: 18px;
   right: 20px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  border: solid white 3px;
+  border-radius: 100%;
+  transform: translateY(-10%);
+  transition: opacity 0.4s;
+  margin-top: 3px;
 }
-.container .header .search-icon:hover {
+.panel .header .search-icon:hover {
   color: #fff;
 }
-.container .notifications {
+.panel .header .search-icon::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 11px;
+  display: block;
+  width: 3px;
+  height: 8px;
+  background: white;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+}
+
+.notifications {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
-.container .notifications .line {
+.notifications .line {
   position: absolute;
   top: 0;
   left: 27px;
@@ -136,75 +152,75 @@
   width: 3px;
   background: #ebebeb;
 }
-.container .notifications .notification {
+.notifications .notification {
   position: relative;
   z-index: 2;
   margin: 25px 20px 25px 43px;
 }
-.container .notifications .notification:nth-child(2) {
-  animation: aside 0.5s ease-out 0.4s;
+.notifications .notification:nth-child(2) {
+  animation: here-am-i 0.5s ease-out 0.4s;
   animation-fill-mode: both;
 }
-.container .notifications .notification:nth-child(3) {
-  animation: aside 0.5s ease-out 0.6s;
+.notifications .notification:nth-child(3) {
+  animation: here-am-i 0.5s ease-out 0.6s;
   animation-fill-mode: both;
 }
-.container .notifications .notification:nth-child(4) {
-  animation: aside 0.5s ease-out 0.8s;
+.notifications .notification:nth-child(4) {
+  animation: here-am-i 0.5s ease-out 0.8s;
   animation-fill-mode: both;
 }
-.container .notifications .notification:hover {
-  color: #5f98cd;
+.notifications .notification:hover {
+  color: #00a876;
   cursor: pointer;
 }
-.container .notifications .notification .circle {
+.notifications .notification .circle {
   box-sizing: border-box;
   position: absolute;
   height: 11px;
   width: 11px;
   background: #fff;
-  border: 2px solid #5f98cd;
+  border: 2px solid #00a876;
   box-shadow: 0 0 0 3px #fff;
   border-radius: 6px;
   top: 0;
   left: -20px;
 }
-.container .notifications .notification .time {
+.notifications .notification .time {
   display: block;
   font-size: 11px;
   line-height: 11px;
   margin-bottom: 2px;
 }
-.container .notifications .notification p {
+.notifications .notification p {
   font-size: 15px;
   line-height: 20px;
   margin: 0;
 }
-.container .notifications .notification p b {
+.notifications .notification p b {
   font-weight: 600;
 }
 
-.menu__aside {
+.menu {
   position: absolute;
   width: 170px;
   height: 270px;
   top: 65px;
   left: 50px;
-  background: #43627d;
+  background: #5fd4b1;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
   transform: translate3d(20px, 0, 0);
 }
-.menu__aside.active {
+.menu.active {
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
   transform: translate3d(0, 0, 0);
 }
-.menu__aside ul {
+.menu ul {
   margin: 0;
   padding: 10px 0;
 }
-.menu__aside li {
-  color: #93b2cd;
+.menu li {
+  color: #ebe4fe;
   margin: 0;
   padding: 18px 17px;
   list-style: none;
@@ -213,23 +229,23 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.menu__aside li:hover {
+.menu li:hover {
   color: #fff;
-  background: #385269;
+  background: #006d4c;
 }
-.menu__aside li span {
+.menu li span {
   display: block;
   float: left;
   margin-right: 8px;
   margin-top: -1px;
 }
-.menu__aside li .item__gear,
-.menu__aside li .item__user,
-.menu__aside li .item__bell {
+.menu li .nav__gear,
+.menu li .nav__user,
+.menu li .nav__bell {
   margin-top: 0;
 }
 
-@keyframes aside {
+@keyframes here-am-i {
   from {
     transform: translate3d(0, 50px, 0);
     opacity: 0;
