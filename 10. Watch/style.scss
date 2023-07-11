@@ -1,13 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,200);
 
-$dark: #1a2238;
-$text: #394568;
-$drop: #7fc1f9;
-$moon: #f6edbd;
-$hole: #ece1a8;
-$hill-bg: #26314f;
-$hill-fg: #303c5d;
-$white: #fff;
+$back: #494d5f;
+$text: #e5eaf5;
+$darker: #2b2e39;
+$darkest: #15171c;
+$red: #8458b3;
+$light: #e5eaf5;
+
 * {
   margin: 0;
   padding: 0;
@@ -22,10 +21,177 @@ $white: #fff;
   margin-left: -200px;
   border-radius: 2px;
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background: $dark;
+  background: $back;
   font-family: 'Open Sans', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   color: $text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watch {
+  width: 224px;
+  height: 224px;
+  border-radius: 50%;
+  background: $darker;
+  position: relative;
+}
+
+.dial {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+  background: $darkest;
+}
+
+.spin {
+  position: absolute;
+  left: 8px;
+  top: -3.2px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  & svg {
+    width: 204.8px;
+    height: 204.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: none;
+
+    & circle {
+      stroke-width: 3px;
+      stroke: $red;
+      stroke-linecap: round;
+      stroke-dasharray: 590;
+      stroke-dashoffset: 590;
+      animation: seconds-spin 2s linear infinite;
+    }
+  }
+}
+
+.seconds {
+  // border: 1px solid red;
+  position: absolute;
+  top: 49.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 176px;
+}
+@for $i from 0 through 30 {
+  .points-set-#{$i} {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(calc(#{$i}* 6deg));
+  }
+}
+.point {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: $light;
+}
+
+.watch-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12.8px;
+  text-align: center;
+}
+
+.date {
+  text-transform: uppercase;
+}
+
+.time {
+  font-size: 44.8px;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.health div {
+  display: inline;
+  position: relative;
+  margin-left: 5px;
+}
+
+.heartrate {
+  margin-right: 6.4px;
+}
+
+.heart {
+  position: relative;
+  right: 10px;
+  top: 4px;
+  width: 12.5px;
+  height: 11.25px;
+  // margin: 10px;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 10px;
+  border-radius: 50px 50px 0 0;
+  background: $red;
+  animation: beat 1s linear infinite;
+}
+
+.heart::before {
+  left: 6.25px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  // animation: beath 1s linear infinite;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes seconds-spin {
+  0%,
+  100% {
+    stroke-dashoffset: 590;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  50.001% {
+    stroke-dashoffset: 1180;
+  }
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    width: 7.7px;
+    height: 11px;
+  }
+  50% {
+    width: 7px;
+    height: 10px;
+  }
+}
+@keyframes beath {
+  0%,
+  100% {
+    left: 5.25px;
+  }
+  50% {
+    left: 6.25px;
+  }
 }
