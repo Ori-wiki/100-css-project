@@ -1,36 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div class="frame">
-      <div class="quote">
-        <p class="text">
-          I know quite certainly that I myself have no special talent;
-          curiosity,
-          <span onclick="void(0);" class="tooltip"
-            >obsession
-            <span class="info">
-              <span class="pronounce"
-                >[əbˈseʃ(ə)n]<span class="fa fa-volume-up"></span
-              ></span>
-              <span class="text"
-                ><b>Obsession</b>, a persistent disturbing preoccupation with an
-                often unreasonable idea or feeling.</span
-              >
-            </span>
-          </span>
-          and dogged endurance, combined with self-criticism have brought me to
-          my ideas.
-        </p>
-        <p class="author">Albert Einstein</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="container">
+      <div class="card">
+        <img class="card__img"
+          src="https://images.unsplash.com/photo-1522960237554-f1b900cf4f30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+          alt="girl">
+        <button class='card__action button-fill'>+</button>
+      </div>
+      <div class="card">
+        <img class='position--top card__img'
+          src='https://images.unsplash.com/photo-1535090766271-b3c18d3aa613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+          alt="girl">
+        <button class='card__action button-fill'>+</button>
+      </div>
+      <div class="card">
+        <img class='card__img'
+          src="https://images.unsplash.com/photo-1533858455121-cad255c592dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="girl">
+        <button class='card__action button-fill'>+</button>
+      </div>
+      <div class="card">
+        <img class="card__img card__img_right"
+          src="https://images.unsplash.com/photo-1528341900797-3c17d5088d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1933&q=80"
+          alt="girl">
+        <button class='card__action button-fill'>+</button>
       </div>
     </div>
-  </body>
+    <div class="profile">
+      <div class="profile__background"><img
+          src="https://images.unsplash.com/photo-1629803902776-a3aebfa5840f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80"
+          alt="river">
+      </div>
+      <button class="button-fill button-close">&#10006</button>
+      <div class="profile__img"><img
+          src="https://images.unsplash.com/photo-1534253998104-7f9421e92fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="girl"></div>
+      <div class="profile__details">
+        <p class="profile__name">Julius Ceaser</p>
+        <div class="profile__links">
+          <a href="">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                d="M8.89286 4.75H6.06818C5.34017 4.75 4.75 5.34017 4.75 6.06818C4.75 13.3483 10.6517 19.25 17.9318 19.25C18.6598 19.25 19.25 18.6598 19.25 17.9318V15.1071L16.1429 13.0357L14.5317 14.6468C14.2519 14.9267 13.8337 15.0137 13.4821 14.8321C12.8858 14.524 11.9181 13.9452 10.9643 13.0357C9.98768 12.1045 9.41548 11.1011 9.12829 10.494C8.96734 10.1537 9.06052 9.76091 9.32669 9.49474L10.9643 7.85714L8.89286 4.75Z">
+              </path>
+            </svg>
+          </a>
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-circle-2-filled"
+              width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M5.821 4.91c3.898 -2.765 9.469 -2.539 13.073 .536c3.667 3.127 4.168 8.238 1.152 11.897c-2.842 3.447 -7.965 4.583 -12.231 2.805l-.232 -.101l-4.375 .931l-.075 .013l-.11 .009l-.113 -.004l-.044 -.005l-.11 -.02l-.105 -.034l-.1 -.044l-.076 -.042l-.108 -.077l-.081 -.074l-.073 -.083l-.053 -.075l-.065 -.115l-.042 -.106l-.031 -.113l-.013 -.075l-.009 -.11l.004 -.113l.005 -.044l.02 -.11l.022 -.072l1.15 -3.451l-.022 -.036c-2.21 -3.747 -1.209 -8.392 2.411 -11.118l.23 -.168z"
+                stroke-width="0" fill="currentColor" />
+            </svg>
+          </a>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
 </html>
