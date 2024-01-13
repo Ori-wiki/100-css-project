@@ -130,7 +130,6 @@ img {
     }
   }
 }
-
 .profile__background {
   transform: translateY(-200px);
   transition: transform 0.6s ease-in 0.4s;
@@ -141,6 +140,7 @@ img {
   }
 }
 .button-close {
+  cursor: pointer;
   font-size: 2rem;
   color: white;
   position: absolute;

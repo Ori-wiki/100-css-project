@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,300italic);
+img {
+  max-width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top right, #3a92af 0%, #5ca05a 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  width: 300px;
+  height: 260px;
+  top: 70px;
+  left: 50px;
+  perspective: 800px;
+  background: #fff;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.title {
+  text-align: center;
+  font-size: 16px;
+  color: #676767;
+  line-height: 50px;
+  height: 50px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/*# sourceMappingURL=style.css.map */
