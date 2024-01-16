@@ -103,6 +103,10 @@ img {
   opacity: 0;
 }
 
+.upload {
+  aspect-ratio: 0;
+}
+
 .upload-btn {
   cursor: pointer;
   padding: 12px 35px;
