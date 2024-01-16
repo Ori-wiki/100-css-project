@@ -5,8 +5,8 @@ const uploadBtn = document.querySelector('.upload-btn');
 const dragoverEvents = ['dragover', 'dragenter'];
 const dragleaveEvents = ['dragleave', 'dragend', 'drop'];
 
-fileInput.addEventListener('change', (event) => {
-  const fileName = event.target.files[0].name;
+fileInput.addEventListener('change', (e) => {
+  const fileName = e.target.files[0].name;
   dropzone.innerHTML = `<span class="file-name">${fileName}</span>`;
 });
 
@@ -14,12 +14,12 @@ const addDragoverStyles = () => dropzone.classList.add('on-dragover');
 
 const removeDragoverStyles = () => dropzone.classList.remove('on-dragover');
 
-dragoverEvents.forEach((event) => {
-  dropzone.addEventListener(event, addDragoverStyles);
+dragoverEvents.forEach((e) => {
+  dropzone.addEventListener(e, addDragoverStyles);
 });
 
-dragleaveEvents.forEach((event) => {
-  dropzone.addEventListener(event, removeDragoverStyles);
+dragleaveEvents.forEach((e) => {
+  dropzone.addEventListener(e, removeDragoverStyles);
 });
 
 uploadBtn.addEventListener('click', () => {
